@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message box</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 233, 205);
+        }
+        .border{
+            margin: 180px 500px;
+        }
+        .border {
+            border: 2px solid black;
+            width: 400px;
+            height: 300px;
+            border-radius: 30px;
+            text-align: center;
+            background-color: rgb(248, 205, 149);
+            box-shadow: 10px 10px 10px  rosybrown;
+            font-size: 25px;
+        }
+        /* .border,h3{
+            text-align: center;
+       
+        } */
+         .btn1{
+           background-color: goldenrod;
+           color: black;
+           border-style: none;
+           margin-top: 40px;
+           margin-left: 20px;
+           margin-right: 10px;
+           width: 80px;
+           height: 30px;
+           border-radius: 4px;
+           font-size:20px;
+         }
+         .area{
+            width: 300px;
+            height: 55px;
+            margin-top: 20px;
+            border: 2px solid black;
+            background-color: antiquewhite;
+            text-align: center;
+            font-size: 25px;
+         }
+         img{
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+            margin-left: 5px;
+            border-radius: 50%;
+         }
+         
+    </style>
+</head>
+<body>
+    <div class="border">
+        
+      <h3>Ask Me a Question ?</h3>
+      <input type="text" class="area" id="in" placeholder="Type Somthing...">
+      <div class="btn">
+        <button class="btn1" onclick="accept()">Accept</button>
+        <button class="btn1" onclick="decline()">Decline</button>
+      </div>
+    
+    </div>
+    <script>
+        function decline(){
+     alert("Question Declined");
+}
+
+let questions = [
+    "how old are you",
+    "what is your name",
+    "are you happy right now",
+    "what is your profession",
+    "are you a programmer",
+    "how many languages do you know",
+    "are you an engineer",
+    "what is your age",
+    "who is the cuurent owner of tesla",
+    "who is the prime minister of india"
+]
+
+function accept(){
+    let question = document.querySelector("#in").value;
+    question = question.toLowerCase();
+    if(questions.includes(question)) window.alert("Your question accepted Dude");
+    else window.alert("OOPS!!! Your question is rejected");
+}
+    </script>
+</body>
+</html>
